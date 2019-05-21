@@ -8,8 +8,8 @@ resource "aws_launch_configuration" "webserver_launch_config" {
               set -e
               sudo apt-get update
               sudo apt-get install -y python3 python-pip virtualenv git
-              git clone <git url>
-              cd <repo_name>
+              git clone  https://github.com/pavangade17/pavankumar_Challenge.git
+              cd pavankumar_Challenge
               virtualenv venv --python=/usr/bin/python3 && source venv/bin/activate
               pip install -r requirements.txt
               cd ansible && ansible-playbook default.yml -e 'ansible_python_interpreter=/usr/bin/python3 -i hosts'
